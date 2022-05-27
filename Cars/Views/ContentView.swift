@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
-
+    
     @EnvironmentObject private var configService: ConfigService
     @EnvironmentObject private var usedCarService: UsedCarService
-
+    
     var body: some View {
         
         ZStack(alignment: .top) {
@@ -19,31 +19,17 @@ struct ContentView: View {
             // Add error...
             
             List {
-              Section {
-                  ForEach(usedCarService.usedCars) { usedCar in
-                      VStack(alignment: .leading, spacing: 5) {
-                          Text(usedCar.title)
-                              .font(.title3)
-                          HStack {
-                              Text(usedCar.name)
-                                  .font(.caption)
-                              Text(usedCar.year)
-                                  .font(.caption)
-                              Spacer()
-                              Text(usedCar.price)
-                                  .font(.caption)
-                                  .bold()
-                                  .foregroundColor(.red)
-                          }
-                      }
-                      .padding()
-                  }
-              } header: {
-                  Spacer()
-                      .frame(height: 70)
-              }
+                Section {
+                    ForEach(usedCarService.usedCars) { usedCar in
+                        UsedCarRow(usedCar: usedCar)
+                            .padding()
+                    }
+                } header: {
+                    Spacer()
+                        .frame(height: 70)
+                }
             }
-
+            
             VStack(spacing: 0) {
                 Text("Cars")
                     .font(.title)
@@ -52,7 +38,7 @@ struct ContentView: View {
                     .padding(5)
                 
                 HStack {
-
+                    
                     Spacer()
                     
                     Picker("Make", selection: $configService.selectedMake) {
@@ -62,7 +48,7 @@ struct ContentView: View {
                     }
                     .pickerStyle(MenuPickerStyle())
                     .padding(.horizontal)
-
+                    
                     Picker("Model", selection: $configService.selectedModel) {
                         ForEach(configService.models, id: \.self) {
                             Text($0.name)
@@ -70,7 +56,7 @@ struct ContentView: View {
                     }
                     .pickerStyle(MenuPickerStyle())
                     .padding(.horizontal)
-
+                    
                     
                     Picker("Year", selection: $configService.selectedYear) {
                         Text("Year")
@@ -80,18 +66,42 @@ struct ContentView: View {
                     }
                     .pickerStyle(MenuPickerStyle())
                     .padding(.horizontal)
-
+                    
                     Spacer()
                 }
                 .padding(.bottom)
             }
             .background(Color.gray.cornerRadius(20))
             .padding(.horizontal)
-
+            
             Spacer()
         }
         
     }
+}
+
+struct UsedCarRow: View {
+    
+    var usedCar: UsedCar
+    
+    var body: some View {
+        VStack(alignment: .leading, spacing: 5) {
+            Text(usedCar.title)
+                .font(.title3)
+            HStack {
+                Text(usedCar.name)
+                    .font(.caption)
+                Text(usedCar.year)
+                    .font(.caption)
+                Spacer()
+                Text(usedCar.price)
+                    .font(.caption)
+                    .bold()
+                    .foregroundColor(.red)
+            }
+        }
+    }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
