@@ -52,6 +52,7 @@
 		8568F48B2841367E00D966A7 /* UsedCarRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsedCarRow.swift; sourceTree = "<group>"; };
 		8568F48D284136C900D966A7 /* CarPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarPickerView.swift; sourceTree = "<group>"; };
 		8568F490284139FA00D966A7 /* ButtonStyles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
+		8568F49228413B7F00D966A7 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		85CD86982840D007006CCF53 /* Cars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85CD869B2840D007006CCF53 /* CarsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsApp.swift; sourceTree = "<group>"; };
 		85CD869D2840D007006CCF53 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -127,6 +128,7 @@
 		85CD868F2840D007006CCF53 = {
 			isa = PBXGroup;
 			children = (
+				8568F49228413B7F00D966A7 /* README.md */,
 				85CD869A2840D007006CCF53 /* Cars */,
 				85CD86AB2840D009006CCF53 /* CarsTests */,
 				85CD86B52840D009006CCF53 /* CarsUITests */,
