@@ -26,6 +26,7 @@ class UsedCarService: ObservableObject {
 
     var model: Car.Model {
         didSet {
+            print("did set")
             fetchUsedCars()
         }
     }
@@ -47,10 +48,9 @@ class UsedCarService: ObservableObject {
                     self?.error = error
                 }
             }, receiveValue: { [weak self] usedCars in
-                withAnimation {
-                    self?.usedCars = usedCars
-                    self?.error = nil
-                }
+                print("has used cars \(usedCars)")
+                self?.usedCars = usedCars
+                self?.error = nil
             }).store(in: &subscriptions)
     }
     

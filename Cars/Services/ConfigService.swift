@@ -14,7 +14,6 @@ class ConfigService: ObservableObject {
     @Published var selectedModel: Car.Model
     @Published var selectedYear = 2022
     
-    
     @Published var makes: [Car.Make]
     @Published var models: [Car.Model]
     
