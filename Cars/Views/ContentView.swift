@@ -16,8 +16,6 @@ struct ContentView: View {
         
         ZStack(alignment: .top) {
             
-            // Add error...
-            
             List {
                 Section {
                     ForEach(usedCarService.usedCars) { usedCar in
@@ -32,6 +30,18 @@ struct ContentView: View {
             
             CarPickerView()
                 .padding(.horizontal)
+            
+            if let error = usedCarService.error {
+                VStack {
+                    Spacer()
+                    Text(error.localizedDescription)
+                        .padding()
+                    Button(action: { usedCarService.fetchUsedCars() }) {
+                        Text("Try again")
+                    }
+                    Spacer()
+                }
+            }
             
             Spacer()
         }
