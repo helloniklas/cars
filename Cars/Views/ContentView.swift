@@ -9,15 +9,38 @@ import SwiftUI
 
 struct ContentView: View {
 
-    @State private var date = Date()
-    @State private var make: String = ""
-    @State private var model: String = ""
+    @EnvironmentObject private var configService: ConfigService
+    @EnvironmentObject private var usedCarService: UsedCarService
 
     var body: some View {
         
-        
-        VStack {
-            
+        ZStack(alignment: .top) {
+            List {
+              Section {
+                  ForEach(usedCarService.usedCars) { usedCar in
+                      VStack(alignment: .leading, spacing: 5) {
+                          Text(usedCar.title)
+                              .font(.title3)
+                          HStack {
+                              Text(usedCar.name)
+                                  .font(.caption)
+                              Text(usedCar.year)
+                                  .font(.caption)
+                              Spacer()
+                              Text(usedCar.price)
+                                  .font(.caption)
+                                  .bold()
+                                  .foregroundColor(.red)
+                          }
+                      }
+                      .padding()
+                  }
+              } header: {
+                  Spacer()
+                      .frame(height: 70)
+              }
+            }
+
             VStack(spacing: 0) {
                 Text("Cars")
                     .font(.title)
@@ -29,26 +52,24 @@ struct ContentView: View {
 
                     Spacer()
                     
-                    Picker("Make", selection: $model) {
-                        Text("Make")
-                        Text("Mini")
-                        Text("BMW")
-                        Text("Volvo")
-
+                    Picker("Make", selection: $configService.selectedMake) {
+                        ForEach(configService.makes, id: \.self) {
+                            Text($0.name)
+                        }
                     }
                     .pickerStyle(MenuPickerStyle())
                     .padding(.horizontal)
 
-                    Picker("Model", selection: $make) {
-                        Text("Hatchback")
-                        Text("SUV")
-                        
+                    Picker("Model", selection: $configService.selectedModel) {
+                        ForEach(configService.models, id: \.self) {
+                            Text($0.name)
+                        }
                     }
                     .pickerStyle(MenuPickerStyle())
                     .padding(.horizontal)
 
                     
-                    Picker("Year", selection: $date) {
+                    Picker("Year", selection: $configService.selectedYear) {
                         Text("Year")
                         ForEach(1970...2022, id: \.self) {
                             Text(String($0))
@@ -60,15 +81,12 @@ struct ContentView: View {
                     Spacer()
                 }
                 .padding(.bottom)
-                
-                
             }
             .background(Color.gray.cornerRadius(20))
             .padding(.horizontal)
 
             Spacer()
         }
-        
         
     }
 }

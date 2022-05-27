@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8500CDC02840E89D0009213E /* ConfigService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8500CDBF2840E89D0009213E /* ConfigService.swift */; };
+		852FC0772840FBBF00E3B7A1 /* UsedCarsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852FC0762840FBBF00E3B7A1 /* UsedCarsService.swift */; };
+		852FC07B2840FDEE00E3B7A1 /* Networkable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852FC0792840FDEE00E3B7A1 /* Networkable.swift */; };
+		852FC07C2840FDEE00E3B7A1 /* NetworkAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852FC07A2840FDEE00E3B7A1 /* NetworkAPI.swift */; };
+		852FC07F28411A7600E3B7A1 /* UsedCar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852FC07E28411A7600E3B7A1 /* UsedCar.swift */; };
 		85CD869C2840D007006CCF53 /* CarsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CD869B2840D007006CCF53 /* CarsApp.swift */; };
 		85CD869E2840D007006CCF53 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CD869D2840D007006CCF53 /* ContentView.swift */; };
 		85CD86A02840D008006CCF53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85CD869F2840D008006CCF53 /* Assets.xcassets */; };
@@ -34,6 +39,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8500CDBF2840E89D0009213E /* ConfigService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigService.swift; sourceTree = "<group>"; };
+		852FC0762840FBBF00E3B7A1 /* UsedCarsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsedCarsService.swift; sourceTree = "<group>"; };
+		852FC0792840FDEE00E3B7A1 /* Networkable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networkable.swift; sourceTree = "<group>"; };
+		852FC07A2840FDEE00E3B7A1 /* NetworkAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkAPI.swift; sourceTree = "<group>"; };
+		852FC07E28411A7600E3B7A1 /* UsedCar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsedCar.swift; sourceTree = "<group>"; };
 		85CD86982840D007006CCF53 /* Cars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85CD869B2840D007006CCF53 /* CarsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsApp.swift; sourceTree = "<group>"; };
 		85CD869D2840D007006CCF53 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -71,6 +81,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8500CDBE2840E8740009213E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8500CDBF2840E89D0009213E /* ConfigService.swift */,
+				852FC0762840FBBF00E3B7A1 /* UsedCarsService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		852FC0782840FDD700E3B7A1 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				852FC0792840FDEE00E3B7A1 /* Networkable.swift */,
+				852FC07A2840FDEE00E3B7A1 /* NetworkAPI.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		852FC07D28411A5C00E3B7A1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				852FC07E28411A7600E3B7A1 /* UsedCar.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		85CD868F2840D007006CCF53 = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +132,9 @@
 			children = (
 				85CD869B2840D007006CCF53 /* CarsApp.swift */,
 				85CD86C52840D0D5006CCF53 /* Views */,
+				8500CDBE2840E8740009213E /* Services */,
+				852FC0782840FDD700E3B7A1 /* Network */,
+				852FC07D28411A5C00E3B7A1 /* Models */,
 				85CD869F2840D008006CCF53 /* Assets.xcassets */,
 				85CD86A12840D008006CCF53 /* Preview Content */,
 			);
@@ -265,8 +304,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8500CDC02840E89D0009213E /* ConfigService.swift in Sources */,
 				85CD869E2840D007006CCF53 /* ContentView.swift in Sources */,
 				85CD869C2840D007006CCF53 /* CarsApp.swift in Sources */,
+				852FC07B2840FDEE00E3B7A1 /* Networkable.swift in Sources */,
+				852FC07F28411A7600E3B7A1 /* UsedCar.swift in Sources */,
+				852FC0772840FBBF00E3B7A1 /* UsedCarsService.swift in Sources */,
+				852FC07C2840FDEE00E3B7A1 /* NetworkAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
