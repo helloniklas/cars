@@ -41,7 +41,6 @@ struct CarPickerView: View {
             .pickerStyle(MenuPickerStyle())
             .padding(.horizontal)
             
-            
             Picker("Year", selection: $configService.selectedYear) {
                 Text("Year")
                 ForEach(1970...2022, id: \.self) {
@@ -53,6 +52,7 @@ struct CarPickerView: View {
             
             Spacer()
         }
+        .accentColor(.orange)
         .padding(.bottom)
     }
     .background(Color.gray.cornerRadius(20))
