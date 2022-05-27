@@ -39,6 +39,7 @@ struct ContentView: View {
                     Button(action: { usedCarService.fetchUsedCars() }) {
                         Text("Try again")
                     }
+                    .buttonStyle(AnimateSelectionStyle())
                     Spacer()
                 }
             }
