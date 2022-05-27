@@ -39,19 +39,3 @@ class ConfigService: ObservableObject {
     }
     
 }
-
-
-struct Car {
-    
-    struct Make: Hashable {
-        var name: String
-        var models: [Model]
-    }
-
-    struct Model: Hashable {
-        var name: String
-    }
-
-}
-
-
