@@ -13,6 +13,8 @@
 		852FC07C2840FDEE00E3B7A1 /* NetworkAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852FC07A2840FDEE00E3B7A1 /* NetworkAPI.swift */; };
 		852FC07F28411A7600E3B7A1 /* UsedCar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852FC07E28411A7600E3B7A1 /* UsedCar.swift */; };
 		852FC0812841225000E3B7A1 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852FC0802841225000E3B7A1 /* Car.swift */; };
+		8568F48C2841367E00D966A7 /* UsedCarRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8568F48B2841367E00D966A7 /* UsedCarRow.swift */; };
+		8568F48E284136C900D966A7 /* CarPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8568F48D284136C900D966A7 /* CarPickerView.swift */; };
 		85CD869C2840D007006CCF53 /* CarsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CD869B2840D007006CCF53 /* CarsApp.swift */; };
 		85CD869E2840D007006CCF53 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CD869D2840D007006CCF53 /* ContentView.swift */; };
 		85CD86A02840D008006CCF53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85CD869F2840D008006CCF53 /* Assets.xcassets */; };
@@ -46,6 +48,8 @@
 		852FC07A2840FDEE00E3B7A1 /* NetworkAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkAPI.swift; sourceTree = "<group>"; };
 		852FC07E28411A7600E3B7A1 /* UsedCar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsedCar.swift; sourceTree = "<group>"; };
 		852FC0802841225000E3B7A1 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
+		8568F48B2841367E00D966A7 /* UsedCarRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsedCarRow.swift; sourceTree = "<group>"; };
+		8568F48D284136C900D966A7 /* CarPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarPickerView.swift; sourceTree = "<group>"; };
 		85CD86982840D007006CCF53 /* Cars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85CD869B2840D007006CCF53 /* CarsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsApp.swift; sourceTree = "<group>"; };
 		85CD869D2840D007006CCF53 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -173,6 +177,8 @@
 			isa = PBXGroup;
 			children = (
 				85CD869D2840D007006CCF53 /* ContentView.swift */,
+				8568F48B2841367E00D966A7 /* UsedCarRow.swift */,
+				8568F48D284136C900D966A7 /* CarPickerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -307,8 +313,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8568F48C2841367E00D966A7 /* UsedCarRow.swift in Sources */,
 				8500CDC02840E89D0009213E /* ConfigService.swift in Sources */,
 				85CD869E2840D007006CCF53 /* ContentView.swift in Sources */,
+				8568F48E284136C900D966A7 /* CarPickerView.swift in Sources */,
 				852FC0812841225000E3B7A1 /* Car.swift in Sources */,
 				85CD869C2840D007006CCF53 /* CarsApp.swift in Sources */,
 				852FC07B2840FDEE00E3B7A1 /* Networkable.swift in Sources */,

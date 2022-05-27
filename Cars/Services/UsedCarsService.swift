@@ -36,9 +36,7 @@ class UsedCarService: ObservableObject {
         }
     }
     
-    private func fetchUsedCars() {
-        print(#function)
-        print(make.name, model.name, year)
+    func fetchUsedCars() {
         networkAPI
             .fetchUsedCar(make: make.name, model: model.name, year: String(year))
             .receive(on: DispatchQueue.main)

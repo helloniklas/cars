@@ -45,7 +45,7 @@ struct NetworkAPI: Networkable {
         var url: URL {
             switch self {
             case .search:
-                return EndPoint.baseURL.appendingPathComponent("/search")
+                return EndPoint.baseURL.appendingPathComponent("/searchh")
             }
         }
         
