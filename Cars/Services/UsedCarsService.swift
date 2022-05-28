@@ -49,13 +49,15 @@ class UsedCarService: ObservableObject {
             .fetchUsedCar(make: make.name, model: model.name, year: String(year))
             .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: { [weak self] completion in
+                guard let self = self else { return }
                 if case .failure(let error) = completion {
                     print(error.localizedDescription)
-                    self?.error = error
+                    self.error = error
                 }
             }, receiveValue: { [weak self] usedCars in
-                self?.usedCars = usedCars
-                self?.error = nil
+                guard let self = self else { return }
+                self.usedCars = usedCars
+                self.error = nil
             }).store(in: &subscriptions)
     }
     
