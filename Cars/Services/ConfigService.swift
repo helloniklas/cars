@@ -5,7 +5,6 @@
 //  Created by Niklas Alvaeus on 27/05/2022.
 //
 
-import SwiftUI
 import Combine
 
 class ConfigService: ObservableObject {

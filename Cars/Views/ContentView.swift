@@ -12,6 +12,8 @@ struct ContentView: View {
     @EnvironmentObject private var configService: ConfigService
     @EnvironmentObject private var usedCarService: UsedCarService
     
+    private let feedbackGenerator = UINotificationFeedbackGenerator()
+
     var body: some View {
         
         ZStack(alignment: .top) {
@@ -41,6 +43,9 @@ struct ContentView: View {
                     }
                     .buttonStyle(AnimateSelectionStyle())
                     Spacer()
+                }
+                .onAppear {
+                    feedbackGenerator.notificationOccurred(.error)
                 }
             }
             

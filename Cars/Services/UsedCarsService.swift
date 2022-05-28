@@ -5,25 +5,16 @@
 //  Created by Niklas Alvaeus on 27/05/2022.
 //
 
-import SwiftUI
+import Foundation
 import Combine
 
 class UsedCarService: ObservableObject {
     
-    @Published var error: NetworkAPI.Error? {
-        didSet {
-            if error != nil {
-                let generator = UINotificationFeedbackGenerator()
-                generator.notificationOccurred(.error)
-            }
-        }
-    }
+    @Published var error: NetworkAPI.Error?
     @Published var usedCars: [UsedCar] = []
 
     private let networkAPI: Networkable
     private var subscriptions = Set<AnyCancellable>()
-
-    let generator = UINotificationFeedbackGenerator()
 
     init(networkAPI: Networkable, make: Car.Make) {
         self.make = make
